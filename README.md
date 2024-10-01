@@ -1,11 +1,11 @@
 # TSFM_Building
 
-Pytorch implementation of \[BuildSyS 24\] Are Time Series Foundation Models Ready to Revolutionize Predictive Building Analytics? 
+Pytorch implementation of \[BuildSyS '24\] Are Time Series Foundation Models Ready to Revolutionize Predictive Building Analytics? 
 
 # TS-foundation-model
 ## Usage
 ```
-python main_2.py --model YOUR_MODEL --real_data DATA
+python main.py --model YOUR_MODEL --real_data DATA
 ```
 Here,
 ```
@@ -25,10 +25,14 @@ model \in {AutoARIMA,
 ## Chronos installation
  You can find it in [this repo](https://github.com/amazon-science/chronos-forecasting?tab=readme-ov-file)
 
-Create a environment for Chronos
+Create an environment for Chronos
 ```
 conda create -n chronos python=3.10
 conda activate chronos
+```
+Install general packages
+```
+pip install -r requirements.txt
 ```
 Install chronos
  ```
@@ -42,6 +46,10 @@ Create a environment for Moment. Please note that only python version >= 3.10 is
 ```
 conda create -n moment python=3.10
 conda activate moment
+```
+Install general packages
+```
+pip install -r requirements.txt
 ```
 Install moment
  ```
@@ -67,8 +75,17 @@ conda activate uni2ts
 pip install -e '.[notebook]'
 ```
 
+Install general packages
+```
+pip install -r requirements.txt
+```
 
  ## TimeGPT installation
+
+ Install general packages
+```
+pip install -r requirements.txt
+```
  
  ```
 pip install nixtla>=0.5.1
@@ -91,6 +108,12 @@ Create an enviroment using the yaml file.
 conda env create --file=tfm_environment.yml
 conda activate TimesFM
 ```
+
+Install general packages
+```
+pip install -r requirements.txt
+```
+
 Install TimesFM. You maye need to sure you have installed pytorch-cuda==12.1.
 ```
 python3.10 -m pip install git+https://github.com/google-research/timesfm.git
@@ -100,6 +123,11 @@ Create a new conda env
 ```
 conda create -n LagLlama python=3.10
 conda activate LagLlama
+```
+
+Install general packages
+```
+pip install -r requirements.txt
 ```
 
 clone the repo
