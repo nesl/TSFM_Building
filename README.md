@@ -23,16 +23,19 @@ model \in {AutoARIMA,
 ```
 
 # Download dataset
-## Download ElectricityLoadDiagrams20112014
+## Download electricity_uci dataset
 Download the dataset from [ElectricityLoadDiagrams20112014](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014)
 Then put ```LD2011_2014.txt``` in the main folder.
 
-## Download Ecobee dataset
+## Download ecobee dataset
 Download the dataset from [Ecobee](https://drive.google.com/file/d/1nyfKfovXEHx1b_RH7Y8vT5yQUBxorYbn/view?usp=drive_link)
 Then put ```combined_thermostat_data.csv``` in the main folder.
 
+## Download smart* dataset
+The smart* (umass) dataset has been uploaded with the repo.
+
 # TS-foundation-model Setup
-To reproduce the results, please first setup environments for each models:
+To reproduce the results, please first setup environments for **each** model:
 ## Chronos installation
  You can find it in [this repo](https://github.com/amazon-science/chronos-forecasting?tab=readme-ov-file)
 
@@ -130,6 +133,7 @@ Install TimesFM. You maye need to sure you have installed pytorch-cuda==12.1.
 python3.10 -m pip install git+https://github.com/google-research/timesfm.git
 ``` -->
 \[Update on 09/30/24\] TimesFM can be installed via ```pip install timesfm```
+
 ## LagLlama installation
 Create a new conda env
 ```
@@ -167,3 +171,12 @@ download pretrained model weights from HuggingFace 🤗
 ```
 copy the model file to lag-llama
 
+## Contact Information
+
+If you have any questions or feedback, feel free to reach out:
+
+- **Name:** Ozan Baris Mulayim
+- **Email:** [omulayim@andrew.cmu.edu](mailto:omulayim@andrew.cmu.edu)
+
+- **Name:** Pengrui Quan
+- **Email:** [prquan@ucla.edu](mailto:prquan@ucla.edu)
