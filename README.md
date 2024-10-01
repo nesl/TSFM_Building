@@ -3,6 +3,7 @@
 Pytorch implementation of \[BuildSyS '24\] Are Time Series Foundation Models Ready to Revolutionize Predictive Building Analytics? 
 
 # Usage
+TO reproduce the results, please first setup a conda environment
 ```
 python main.py --model YOUR_MODEL --real_data DATA
 ```
@@ -35,8 +36,8 @@ Then put ```combined_thermostat_data.csv``` in the main folder.
 
 Create an environment for Chronos
 ```
-conda create -n chronos python=3.10
-conda activate chronos
+virtualenv chronos -p python3.10
+source chronos/bin/activate
 ```
 Install general packages
 ```
@@ -52,8 +53,8 @@ python3.10 -m pip install git+https://github.com/amazon-science/chronos-forecast
 
 Create a environment for Moment. Please note that only python version >= 3.10 is supported.
 ```
-conda create -n moment python=3.10
-conda activate moment
+virtualenv moment -p python3.10
+source moment/bin/activate
 ```
 Install general packages
 ```
@@ -74,8 +75,8 @@ cd uni2ts
 
 2) Create virtual environment:
 ```shell
-conda create -n uni2ts python=3.10
-conda activate uni2ts
+virtualenv uni2ts -p python3.10
+source uni2ts/bin/activate
 ```
 
 3) Build from source:
@@ -129,8 +130,10 @@ python3.10 -m pip install git+https://github.com/google-research/timesfm.git
 ## LagLlama installation
 Create a new conda env
 ```
-conda create -n LagLlama python=3.10
-conda activate LagLlama
+<!-- conda create -n LagLlama python=3.10
+conda activate LagLlama -->
+virtualenv LagLlama -p python3.10
+source LagLlama/bin/activate
 ```
 
 Install general packages
