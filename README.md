@@ -25,11 +25,11 @@ model \in {AutoARIMA,
 # Download dataset
 ## Download electricity_uci dataset
 Download the dataset from [ElectricityLoadDiagrams20112014](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014)
-Then put ```LD2011_2014.txt``` in the main folder.
+Then put ```LD2011_2014.txt``` in the ```./data/``` folder.
 
 ## Download ecobee dataset
-Download the dataset from [Ecobee](https://drive.google.com/file/d/1nyfKfovXEHx1b_RH7Y8vT5yQUBxorYbn/view?usp=drive_link)
-Then put ```combined_thermostat_data.csv``` in the main folder.
+Download the dataset [Ecobee](https://drive.google.com/file/d/1nyfKfovXEHx1b_RH7Y8vT5yQUBxorYbn/view?usp=drive_link)
+Then put ```combined_thermostat_data.csv``` in the ```./data/``` folder.
 
 ## Download smart* dataset
 The smart* (umass) dataset has been uploaded with the repo.

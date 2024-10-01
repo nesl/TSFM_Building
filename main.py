@@ -45,7 +45,7 @@ def main(args):
         external_condition = electricity_uci_condition
         data_condition = electricity_uci_dura_pred_sr_tuple
         # read the data once instead of everytime it is used, which is time consuming
-        file_path = './LD2011_2014.txt'
+        file_path = './data/LD2011_2014.txt'
         data_df = pd.read_csv(file_path, delimiter=';', header=0)
         batch_number = 16
     elif args.real_data == 'pecan':
