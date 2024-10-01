@@ -12,7 +12,10 @@ from get_data import get_real_building_data, get_electricity_data, \
                     get_covid_data, get_c2000_data, \
                     get_restaurant_data, get_air_data
 import warnings
-import torch
+try:
+    import torch
+except ImportError:
+    print("Torch is not installed. Continuing without it.")
 
 
 def plot_pred(org_data, median, _dir='None', gt=None, low=None, high=None, forecast_index=None, title=None):

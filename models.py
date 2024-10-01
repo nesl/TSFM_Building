@@ -1,4 +1,8 @@
-import torch
+try:
+    import torch
+    print("Torch imported successfully.")
+except ImportError:
+    print("Torch is not installed. Continuing without it.")
 import numpy as np 
 import os 
 import pdb

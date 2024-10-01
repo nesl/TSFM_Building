@@ -5,3 +5,4 @@ pillow
 pmdarima
 datasets
 scikit-learn
+statsmodels

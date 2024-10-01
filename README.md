@@ -28,7 +28,7 @@ Download the dataset from [ElectricityLoadDiagrams20112014](https://archive.ics.
 Then put ```LD2011_2014.txt``` in the main folder.
 
 ## Download Ecobee dataset
-Download the dataset from [Ecobee](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014)
+Download the dataset from [Ecobee](https://drive.google.com/file/d/1nyfKfovXEHx1b_RH7Y8vT5yQUBxorYbn/view?usp=drive_link)
 Then put ```combined_thermostat_data.csv``` in the main folder.
 
 # TS-foundation-model Setup
@@ -51,7 +51,7 @@ python3.10 -m pip install git+https://github.com/amazon-science/chronos-forecast
  ```
 
  ## Moment installation
- You can find it in [this repo](pip install git+https://github.com/moment-timeseries-foundation-model/moment.git)
+ You can find it in [this repo](https://github.com/moment-timeseries-foundation-model/moment.git)
 
 Create a environment for Moment. Please note that only python version >= 3.10 is supported.
 ```
@@ -112,9 +112,9 @@ nixtla_client = NixtlaClient(api_key = 'YOUR API KEY HERE')
  ```
  ## TimesFM installation
 
-To view the original [repo](https://github.com/google-research/timesfm?tab=readme-ov-file)
+View the original [repo](https://github.com/google-research/timesfm?tab=readme-ov-file). Follow the instruction in the repo to install the model.
 
-Create an enviroment using the yaml file.
+<!-- Create an enviroment using the yaml file.
 ```
 conda env create --file=tfm_environment.yml
 conda activate TimesFM
@@ -128,7 +128,8 @@ pip install -r requirements.txt
 Install TimesFM. You maye need to sure you have installed pytorch-cuda==12.1.
 ```
 python3.10 -m pip install git+https://github.com/google-research/timesfm.git
-```
+``` -->
+\[Update on 09/30/24\] TimesFM can be installed via ```pip install timesfm```
 ## LagLlama installation
 Create a new conda env
 ```
@@ -165,13 +166,4 @@ download pretrained model weights from HuggingFace 🤗
 !huggingface-cli download time-series-foundation-models/Lag-Llama lag-llama.ckpt --local-dir ./
 ```
 copy the model file to lag-llama
-## AutoARIMA & SeasonalARIMA
-```
-pip install pmdarima
-```
 
-## Install environment
-```
-pip install scipy
-pip install statsmodels
-```
