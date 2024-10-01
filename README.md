@@ -3,7 +3,7 @@
 Pytorch implementation of \[BuildSyS '24\] Are Time Series Foundation Models Ready to Revolutionize Predictive Building Analytics? 
 
 # Usage
-TO reproduce the results, please first setup a conda environment
+The following code will run inference on each model and dataset:
 ```
 python main.py --model YOUR_MODEL --real_data DATA
 ```
@@ -18,6 +18,7 @@ model \in {AutoARIMA,
               chronos,
               TimeGPT,
               TimesFM,
+              uni2ts
               ...}
 ```
 
@@ -31,6 +32,7 @@ Download the dataset from [Ecobee](https://archive.ics.uci.edu/dataset/321/elect
 Then put ```combined_thermostat_data.csv``` in the main folder.
 
 # TS-foundation-model Setup
+To reproduce the results, please first setup environments for each models:
 ## Chronos installation
  You can find it in [this repo](https://github.com/amazon-science/chronos-forecasting?tab=readme-ov-file)
 
