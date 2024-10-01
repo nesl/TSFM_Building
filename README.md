@@ -2,14 +2,13 @@
 
 Pytorch implementation of \[BuildSyS '24\] Are Time Series Foundation Models Ready to Revolutionize Predictive Building Analytics? 
 
-# TS-foundation-model
-## Usage
+# Usage
 ```
 python main.py --model YOUR_MODEL --real_data DATA
 ```
 Here,
 ```
-real_data \in {building, electricity}
+real_data \in {ecobee, electricity_uci, umass}
 ```
 ```
 model \in {AutoARIMA,
@@ -21,7 +20,16 @@ model \in {AutoARIMA,
               ...}
 ```
 
+# Download dataset
+## Download ElectricityLoadDiagrams20112014
+Download the dataset from [ElectricityLoadDiagrams20112014](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014)
+Then put ```LD2011_2014.txt``` in the main folder.
 
+## Download Ecobee dataset
+Download the dataset from [Ecobee](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014)
+Then put ```combined_thermostat_data.csv``` in the main folder.
+
+# TS-foundation-model Setup
 ## Chronos installation
  You can find it in [this repo](https://github.com/amazon-science/chronos-forecasting?tab=readme-ov-file)
 
@@ -162,7 +170,3 @@ pip install pmdarima
 pip install scipy
 pip install statsmodels
 ```
-
-## Download ElectricityLoadDiagrams20112014
-Download the dataset from [ElectricityLoadDiagrams20112014](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014)
-Then put ```LD2011_2014.txt``` in the main folder.
