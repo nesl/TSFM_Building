@@ -152,13 +152,17 @@ clone the repo
 ```
 !git clone https://github.com/time-series-foundation-models/lag-llama/
 ```
+Go to the current folder
+```
+cd <Current_folder>
+```
 Hyperlink your lag-llama folder to the current folder
 ```
-ln -s <Your_lag-llama_folder> ./lag_src
+ln -s <Your_lag-llama_folder> lag_src
 ```
 Copy the model file and go to the lag-llama folder
 ```
-cp lagllama_model.py ./lag_src
+cp lagllama_model.py lag_src
 cd ./lag_src
 ```
 install the requirements
@@ -169,7 +173,7 @@ download pretrained model weights from HuggingFace 🤗
 ```
 !huggingface-cli download time-series-foundation-models/Lag-Llama lag-llama.ckpt --local-dir ./
 ```
-copy the model file to lag-llama
+and it will copy the model file to lag-llama
 
 ## Contact Information
 
