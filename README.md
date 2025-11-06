@@ -184,3 +184,7 @@ If you have any questions or feedback, feel free to reach out:
 
 - **Name:** Pengrui Quan
 - **Email:** [prquan@ucla.edu](mailto:prquan@ucla.edu)
+
+## License
+
+This dataset is released under the BSD 3-Clause License. See the LICENSE file for details.
