@@ -1,6 +1,10 @@
 # TSFM_Building
 
-Pytorch implementation of \[BuildSyS '24\] Are Time Series Foundation Models Ready to Revolutionize Predictive Building Analytics? 
+## 🔥 News
+
+<!-- - 🔥 **v2.0** - Extension: \[Data-Centric Engineering Journal\] Can Time-Series Foundation Models Perform Building Energy Management Tasks? -->
+- 🔥 **v2.0** [11/20/26] - We have reorganized the repository to incorporate the extended journal version, *Can Time-Series Foundation Models Perform Building Energy Management Tasks?* Our extension preprint is available on [ArXiv](https://arxiv.org/abs/2506.11250). Stay tuned for the final published version.
+- **v1.0** - BuildSys 2024 release: \[BuildSys '24\] Are Time Series Foundation Models Ready to Revolutionize Predictive Building Analytics? 
 
 # Usage
 The following code will run inference on each model and dataset:
