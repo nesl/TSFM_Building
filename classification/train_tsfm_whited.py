@@ -110,6 +110,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model", type=str, default="chronos", help="The type of models we are testing (chronos | moment)"
     )
+    parser.add_argument(
+        "--use_nn", action="store_true", help="The type of classification head (svm | nn)"
+    )
     args = parser.parse_args()
     # model_name = "moment"
     model_name = args.model
@@ -118,7 +121,7 @@ if __name__ == "__main__":
     dataset = "original"
 
     # use_nn = True
-    use_nn = False
+    use_nn = args.use_nn
     print(model_name, "whited version: ", dataset, "use nn:", use_nn)
 
     if dataset == "small":
@@ -171,7 +174,7 @@ if __name__ == "__main__":
         model = pipeline.embed
     elif model_name == 'ts2vec':
         import sys
-        sys.path.append('/home/prquan/Github/TS-foundation-model/classification/ts2vec/')
+        sys.path.append('./classification/ts2vec/')
         from ts2vec import TS2Vec
         ts2vec_model = TS2Vec(input_dims=1, device="cuda", batch_size=8, lr=0.001, output_dims=320)
         # Extract and reshape train and test time series data
