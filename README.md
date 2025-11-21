@@ -6,6 +6,30 @@
 - 🔥 **v2.0** [11/20/26] - We have reorganized the repository to incorporate the extended journal version, *Can Time-Series Foundation Models Perform Building Energy Management Tasks?* Our extension preprint is available on [ArXiv](https://arxiv.org/abs/2506.11250). Stay tuned for the final published version.
 - **v1.0** - BuildSys 2024 release: \[BuildSys '24\] Are Time Series Foundation Models Ready to Revolutionize Predictive Building Analytics? 
 
+### 🔥 We included classification evaluation using TSFM in **v2.0**. 
+- Follow the instruction in [soft DTW](https://github.com/Maghoumi/pytorch-softdtw-cuda) to install the package.
+- Download the WHITEDv1.1 dataset using the link.
+- Copy and unzip the [whited dataset](https://www.cs.cit.tum.de/dis/resources/whited/)
+```
+mv WHITEDv1.1.zip ./classification/data/
+cd ./classification
+unzip ./data/WHITEDv1.1.zip
+```
+- Perform training using baselines `resent`, `dtw`, and `ts2vec`:
+```
+python train_ts2vec_whited.py
+python train_dtw_whited.py
+python train_resnet_whited.py
+```
+- Perform evaluation using TSFM `chronos` and `moment`:
+```
+python train_tsfm_whited.py --model chronos
+```
+or
+```
+python train_tsfm_whited.py --model moment
+```
+
 # Usage
 The following code will run inference on each model and dataset:
 ```
@@ -192,3 +216,8 @@ If you have any questions or feedback, feel free to reach out:
 ## License
 
 This dataset is released under the BSD 3-Clause License. See the LICENSE file for details.
+
+## Acknowledgemetn
+Mario Bergés and Mani Srivastava hold concurrent appointments as Amazon Scholars, and as Professors at their respective universities, but work in this paper is not associated with Amazon. Dezhi Hong is also affiliated with Amazon but work in this paper is not associated with Amazon. This research was sponsored in part by AFOSR award \#FA95502210193, DEVCOM ARL award \#W911NF1720196, NSF award \#CNS-2325956, NIH award \#P41EB028242, and Sandia National Laboratories award \#2169310.
+
+We would like to extend our thanks to authors of [ts2vec](https://github.com/zhihanyue/ts2vec), from which the baseline is built on.

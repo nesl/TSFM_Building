@@ -178,3 +178,5 @@ cython_debug/
 .DS_Store
 edges.csv
 vertices.csv
+
+classification/data/*
