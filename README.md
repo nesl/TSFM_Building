@@ -32,7 +32,11 @@ python train_tsfm_whited.py --model moment
 Note: We used the BTS dataset for our second classification task. At the time of the experiment, all of the data was not public due to an ongoing comptetiton. Thus we used the data ('data/train_X_v0.1.0.zip') from the [competition](https://www.aicrowd.com/challenges/brick-by-brick-2024#starter-kit-and-resources)
 
 **📓 Jupyter Notebooks:**
-- For MOMENT embedding generation on BTS/WHITED datasets, see: `classification_copy/Moment_embedding_generation.ipynb`
+- For TSFM embedding generation (MOMENT & Chronos) on BTS/WHITED datasets, see: `classification_copy/Moment_embedding_generation.ipynb`
+  - This notebook demonstrates how to generate MOMENT and Chronos embeddings from both datasets
+  - For classification evaluation (SVM training, metrics), use the Python scripts:
+    - `python train_tsfm_whited.py --model moment` (MOMENT embeddings + SVM classifier)
+    - `python train_tsfm_whited.py --model chronos` (Chronos embeddings + SVM classifier)
 - For R2C2 model experiments with covariates, see: `classification_copy/covariates_R2C2.ipynb`
 
 # Usage
