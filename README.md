@@ -32,12 +32,12 @@ python train_tsfm_whited.py --model moment
 Note: We used the BTS dataset for our second classification task. At the time of the experiment, all of the data was not public due to an ongoing comptetiton. Thus we used the data ('data/train_X_v0.1.0.zip') from the [competition](https://www.aicrowd.com/challenges/brick-by-brick-2024#starter-kit-and-resources)
 
 **📓 Jupyter Notebooks:**
-- For TSFM embedding generation (MOMENT & Chronos) on BTS/WHITED datasets, see: `classification_copy/Moment_embedding_generation.ipynb`
+- For TSFM embedding generation (MOMENT & Chronos) on BTS/WHITED datasets, see: `classification/Moment_embedding_generation.ipynb`
   - This notebook demonstrates how to generate MOMENT and Chronos embeddings from both datasets
   - For classification evaluation (SVM training, metrics), use the Python scripts:
     - `python train_tsfm_whited.py --model moment` (MOMENT embeddings + SVM classifier)
     - `python train_tsfm_whited.py --model chronos` (Chronos embeddings + SVM classifier)
-- For R2C2 model experiments with covariates, see: `classification_copy/covariates_R2C2.ipynb`
+- For R2C2 model experiments with covariates, see: `classification/covariates_R2C2.ipynb`
 
 # Usage
 The following code will run inference on each model and dataset:
@@ -59,7 +59,7 @@ model \in {AutoARIMA,
               ...}
 ```
 
-Note: For R2C2 baseline experiments, see `classification_copy/covariates_R2C2.ipynb`. The original R2C2 implementation is available at [this codebase](https://github.com/ozanbarism/GBM4SingleZoneMultiNodeSystems). 
+Note: For R2C2 baseline experiments, see `classification/covariates_R2C2.ipynb`. The original R2C2 implementation is available at [this codebase](https://github.com/ozanbarism/GBM4SingleZoneMultiNodeSystems). 
 # Download dataset
 ## Download electricity_uci dataset
 Download the dataset from [ElectricityLoadDiagrams20112014](https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014)
