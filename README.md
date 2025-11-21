@@ -217,7 +217,7 @@ If you have any questions or feedback, feel free to reach out:
 
 This dataset is released under the BSD 3-Clause License. See the LICENSE file for details.
 
-## Acknowledgemetn
+## Acknowledgement
 Mario Bergés and Mani Srivastava hold concurrent appointments as Amazon Scholars, and as Professors at their respective universities, but work in this paper is not associated with Amazon. Dezhi Hong is also affiliated with Amazon but work in this paper is not associated with Amazon. This research was sponsored in part by AFOSR award \#FA95502210193, DEVCOM ARL award \#W911NF1720196, NSF award \#CNS-2325956, NIH award \#P41EB028242, and Sandia National Laboratories award \#2169310.
 
 We would like to extend our thanks to authors of [ts2vec](https://github.com/zhihanyue/ts2vec), from which the baseline is built on.
