@@ -1,0 +1,13 @@
+name: covariate_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9.18
+  - numpy=1.26.4
+  - scipy=1.13.0
+  - pip:
+      - pandas==2.2.2
+      - matplotlib==3.8.4
+      - seaborn==0.13.2
+      - scikit-learn==1.4.2

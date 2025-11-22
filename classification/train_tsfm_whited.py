@@ -111,7 +111,7 @@ if __name__ == "__main__":
         "--model", type=str, default="chronos", help="The type of models we are testing (chronos | moment)"
     )
     parser.add_argument(
-        "--use_nn", action="store_true", help="The type of classification head (svm | nn)"
+        "--save_embeddings", action="store_true", help="Save embeddings to .npy files"
     )
     args = parser.parse_args()
     # model_name = "moment"
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     dataset = "original"
 
     # use_nn = True
-    use_nn = args.use_nn
+    use_nn = False
     print(model_name, "whited version: ", dataset, "use nn:", use_nn)
 
     if dataset == "small":
@@ -174,7 +174,7 @@ if __name__ == "__main__":
         model = pipeline.embed
     elif model_name == 'ts2vec':
         import sys
-        sys.path.append('./classification/ts2vec/')
+        sys.path.append('/home/prquan/Github/TS-foundation-model/classification/ts2vec/')
         from ts2vec import TS2Vec
         ts2vec_model = TS2Vec(input_dims=1, device="cuda", batch_size=8, lr=0.001, output_dims=320)
         # Extract and reshape train and test time series data
@@ -197,6 +197,18 @@ if __name__ == "__main__":
 
     print(train_embeddings.shape, train_labels.shape)
     print(test_embeddings.shape, test_labels.shape)
+
+    # Save embeddings if requested
+    if args.save_embeddings:
+        np.save(f"{model_name}_train_embeddings_whited.npy", train_embeddings)
+        np.save(f"{model_name}_train_labels_whited.npy", train_labels)
+        np.save(f"{model_name}_test_embeddings_whited.npy", test_embeddings)
+        np.save(f"{model_name}_test_labels_whited.npy", test_labels)
+        print(f"Embeddings saved:")
+        print(f"  - {model_name}_train_embeddings_whited.npy: {train_embeddings.shape}")
+        print(f"  - {model_name}_train_labels_whited.npy: {train_labels.shape}")
+        print(f"  - {model_name}_test_embeddings_whited.npy: {test_embeddings.shape}")
+        print(f"  - {model_name}_test_labels_whited.npy: {test_labels.shape}")
 
     if use_nn:
         from fcn import train_fcn_classifier_single_class
