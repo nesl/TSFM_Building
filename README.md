@@ -11,6 +11,7 @@
 
 ```bash
 # Create the environment from the YAML file
+cd ./classification
 conda env create -f nesl_environment.yml
 
 # Activate it
