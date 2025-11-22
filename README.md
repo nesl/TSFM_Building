@@ -3,13 +3,13 @@
 ## 🔥 News
 
 <!-- - 🔥 **v2.0** - Extension: \[Data-Centric Engineering Journal\] Can Time-Series Foundation Models Perform Building Energy Management Tasks? -->
-- 🔥 **v2.0** [11/20/26] - We have reorganized the repository to incorporate the extended journal version, *Can Time-Series Foundation Models Perform Building Energy Management Tasks?* Our extension preprint is available on [ArXiv](https://arxiv.org/abs/2506.11250). Stay tuned for the final published version.
+- 🔥 **v2.0** [11/20/26] - We have reorganized the repository to incorporate the extended journal version of our original article, *Can Time-Series Foundation Models Perform Building Energy Management Tasks?* The preprint of this extended article is available on [ArXiv](https://arxiv.org/abs/2506.11250). Stay tuned for the final published version.
 - **v1.0** - BuildSys 2024 release: \[BuildSys '24\] Are Time Series Foundation Models Ready to Revolutionize Predictive Building Analytics? 
 
 ### 🔥 We included classification evaluation using TSFM in **v2.0**. 
 - Follow the instruction in [soft DTW](https://github.com/Maghoumi/pytorch-softdtw-cuda) to install the package.
-- Download the WHITEDv1.1 dataset using the link.
-- Copy and unzip the [whited dataset](https://www.cs.cit.tum.de/dis/resources/whited/)
+- Download the WHITEDv1.1 dataset using [this link](https://www.cs.cit.tum.de/dis/resources/whited/)
+- Copy and unzip the WHHITED into `/classification/data` subfolder.
 ```
 mv WHITEDv1.1.zip ./classification/data/
 cd ./classification
@@ -29,7 +29,7 @@ or
 ```
 python train_tsfm_whited.py --model moment
 ```
-Note: We used the BTS dataset for our second classification task. At the time of the experiment, all of the data was not public due to an ongoing comptetiton. Thus we used the data ('data/train_X_v0.1.0.zip') from the [competition](https://www.aicrowd.com/challenges/brick-by-brick-2024#starter-kit-and-resources)
+Note: We used the BTS dataset for our second classification task. At the time of the experiment, not all of the data was public due to an ongoing comptetiton. Thus we used the data ('data/train_X_v0.1.0.zip') from the [competition](https://www.aicrowd.com/challenges/brick-by-brick-2024#starter-kit-and-resources)
 
 **📓 Jupyter Notebooks:**
 - For TSFM embedding generation (MOMENT & Chronos) on BTS/WHITED datasets, see: `classification/Moment_embedding_generation.ipynb`
@@ -194,7 +194,7 @@ Go to the current folder
 ```
 cd <Current_folder>
 ```
-Hyperlink your lag-llama folder to the current folder
+Create a symbolic link from your lag-llama folder to the current folder
 ```
 ln -s <Your_lag-llama_folder> lag_src
 ```
@@ -228,6 +228,6 @@ If you have any questions or feedback, feel free to reach out:
 This dataset is released under the BSD 3-Clause License. See the LICENSE file for details.
 
 ## Acknowledgement
-Mario Bergés and Mani Srivastava hold concurrent appointments as Amazon Scholars, and as Professors at their respective universities, but work in this paper is not associated with Amazon. Dezhi Hong is also affiliated with Amazon but work in this paper is not associated with Amazon. This research was sponsored in part by AFOSR award \#FA95502210193, DEVCOM ARL award \#W911NF1720196, NSF award \#CNS-2325956, NIH award \#P41EB028242, and Sandia National Laboratories award \#2169310.
+Mario Bergés and Mani Srivastava hold concurrent appointments as Amazon Scholars, and as Professors at their respective universities, but work in this paper is not associated with Amazon. Dezhi Hong is also affiliated with Amazon but his work on this paper is not associated with Amazon. This research was sponsored in part by AFOSR award \#FA95502210193, DEVCOM ARL award \#W911NF1720196, NSF award \#CNS-2325956, NIH award \#P41EB028242, and Sandia National Laboratories award \#2169310.
 
 We would like to extend our thanks to authors of [ts2vec](https://github.com/zhihanyue/ts2vec), from which the baseline is built on.
