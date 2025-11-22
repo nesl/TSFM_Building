@@ -26,6 +26,23 @@ mv WHITEDv1.1.zip ./classification/data/
 cd ./classification
 unzip ./data/WHITEDv1.1.zip
 ```
+
+Note: We used the BTS dataset for our second classification task.
+At the time of the experiment, all of the data was not public due to an ongoing competition.
+Thus we used the data from the [competition](https://www.aicrowd.com/challenges/brick-by-brick-2024)
+```bash
+# Download train_X_v0.1.0.zip and train_y_v0.1.0.csv from the competition website
+# Place them in the data directory
+mv train_X_v0.1.0.zip ./classification/data/
+mv train_y_v0.1.0.csv ./classification/data/
+
+# Navigate to the classification directory
+cd ./classification
+
+# Unzip the training data
+unzip ./data/train_X_v0.1.0.zip -d ./data/
+```
+
 - Perform training using baselines `resnet`, `dtw`, and `ts2vec`:
 ```bash
 python train_ts2vec_whited.py
@@ -50,11 +67,6 @@ python train_tsfm_whited.py --model chronos --save_embeddings
 
 - Perform evaluation using TSFM `chronos` and `moment` on BTS dataset:
 ```bash
-# Note: We used the BTS dataset for our second classification task.
-# At the time of the experiment, all of the data was not public due to an ongoing competition.
-# Thus we used the data from the competition: https://www.aicrowd.com/challenges/brick-by-brick-2024
-# Download train_X_v0.1.0.zip and train_y_v0.1.0.csv from the competition
-# Place them in the ./classification/data/ folder
 
 # MOMENT model - generates embeddings + trains SVM classifiers (multi-label)
 python train_tsfm_bts.py --model moment
