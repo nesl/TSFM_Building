@@ -146,7 +146,7 @@ mv combined_thermostat_data.csv ./data/
 ``` 
 
 ## Download smart* dataset
-The smart* (umass) dataset has been uploaded with the repo. It uses CC BY 4.0 license, which allows copy and redistribute the material.
+The [smart* (umass) dataset](https://traces.cs.umass.edu/docs/traces/smartstar/) has been uploaded with the repo. We downloaded the apartment dataset called ' apartment-electrical.tar.gz' and merged the data for years 2015 and 2016. It uses CC BY 4.0 license, which allows copy and redistribute the material.
 
 # TS-foundation-model Setup
 To reproduce the results, please first setup environments for **each** model:
